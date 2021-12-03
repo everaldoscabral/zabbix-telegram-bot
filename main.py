@@ -62,7 +62,7 @@ def alertas(mensagem):
 
     eventos = zapi.problem.get(
         output = 'extend',
-        limit = 5,
+        limit = 25,
         severities = severidade,
         sortfield = ['eventid'],
         sortorder = 'DESC'
@@ -72,4 +72,4 @@ def alertas(mensagem):
         bot.send_message(mensagem.chat.id, '❌ '+alerta['name']+' ❌')
 
 
-bot.polling()
+bot.infinity_polling()
