@@ -70,6 +70,8 @@ def alertas(mensagem):
 
     for alerta in eventos:
         bot.send_message(mensagem.chat.id, '❌ '+alerta['name']+' ❌')
+        
+        time.sleep(3)
 
 
 bot.infinity_polling()
